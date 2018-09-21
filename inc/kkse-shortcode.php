@@ -223,7 +223,7 @@ final class Kkse_shortcode {
 	 * adding sands to head
 	 */
 	public function add_css() {
-        wp_enqueue_style('emkredittkortse-style', KREDITTKORT_SE_PLUGIN_URL.'assets/css/pub/em-kredittkort-se.css', array(), '1.0.2', '(min-width: 801px)');
+        wp_enqueue_style('emkredittkortse-style', KREDITTKORT_SE_PLUGIN_URL.'assets/css/pub/em-kredittkort-se.css', array(), '1.0.3', '(min-width: 801px)');
         wp_enqueue_style('emkredittkortse-mobile', KREDITTKORT_SE_PLUGIN_URL.'assets/css/pub/em-kredittkort-se-mobile.css', array(), '1.0.2', '(max-width: 800px)');
 	}
 
