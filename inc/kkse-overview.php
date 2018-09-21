@@ -38,8 +38,8 @@ final class Kkse_overview {
 
 			if ($post->post_type == 'attachment') continue;
 
-			if (strpos($post->post_content, '[lan') !== false) {
-				preg_match_all('/\[lan.*?\]/', $post->post_content, $matches);
+			if (strpos($post->post_content, '[kredittkort') !== false) {
+				preg_match_all('/\[kredittkort.*?\]/', $post->post_content, $matches);
 
 				$m = '';
 
