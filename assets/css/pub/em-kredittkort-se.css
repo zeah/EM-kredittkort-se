@@ -45,7 +45,7 @@
 	grid-template-rows: minmax(2.5rem, auto) auto;
 
 	grid-template-areas: 
-	"title infoC infoL endc endc"
+	"title . . . ."
 	"logo infoC infoL endc endc";
 	/*"title infoC infoL terning bestillc"*/
 	/*"logo infoC infoL terning bestillc";*/
@@ -126,6 +126,12 @@
 	margin-left: 4rem;
 }
 
+
+.emkredittkort-list-container,
+.emkredittkort-info-container {
+	position: relative;
+	bottom: 4px;
+}
 
 /* 2.5.1 list info 
    info elements styled as list-item */
