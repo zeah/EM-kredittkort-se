@@ -26,16 +26,16 @@ final class Kkse_shortcode {
 	private function wp_hooks() {
 
 		// loan list
-		if (!shortcode_exists('kredittkort')) add_shortcode('kredittkort', array($this, 'add_shortcode'));
-		else add_shortcode('emkredittkort', array($this, 'add_shortcode'));
+		if (!shortcode_exists('kreditkort')) add_shortcode('kreditkort', array($this, 'add_shortcode'));
+		else add_shortcode('emkreditkort', array($this, 'add_shortcode'));
 
 		// loan thumbnail
-		if (!shortcode_exists('kredittkort-bilde')) add_shortcode('kredittkort-bilde', array($this, 'add_shortcode_bilde'));
-		else add_shortcode('emkredittkort-bilde', array($this, 'add_shortcode_bilde'));
+		if (!shortcode_exists('kreditkort-bilde')) add_shortcode('kreditkort-bilde', array($this, 'add_shortcode_bilde'));
+		else add_shortcode('emkreditkort-bilde', array($this, 'add_shortcode_bilde'));
 
 		// loan button
-		if (!shortcode_exists('kredittkort-bestill')) add_shortcode('kredittkort-bestill', array($this, 'add_shortcode_bestill'));
-		else add_shortcode('emkredittkort-bestill', array($this, 'add_shortcode_bestill'));
+		if (!shortcode_exists('kreditkort-bestill')) add_shortcode('kreditkort-bestill', array($this, 'add_shortcode_bestill'));
+		else add_shortcode('emkreditkort-bestill', array($this, 'add_shortcode_bestill'));
 
 
 		add_filter('search_first', array($this, 'add_serp'));
