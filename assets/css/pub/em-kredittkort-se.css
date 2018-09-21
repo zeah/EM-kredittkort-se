@@ -88,6 +88,8 @@
 	font-size: 1.6rem;
 	color: #000;
 	/*background-color: inherit;*/
+	position: relative;
+	bottom: 0.3rem;
 }
 
 
