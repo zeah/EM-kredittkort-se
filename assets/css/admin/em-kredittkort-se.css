@@ -1,0 +1,50 @@
+
+.emkredittkortse-sort-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.emkredittkortse-meta-container input {
+	width: 300px;
+	margin: 0 10px 10px 0;
+}
+
+.emkredittkortse-sort-container input {
+	width: 150px;
+}
+
+.emkredittkortse-info-container {
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.emkredittkortse-input-title {
+	font-size: 16px;
+}
+.emkredittkortse-input-container input[type=checkbox]{
+	width: auto;
+}
+/* overview window */
+
+#myTable2 {
+	border-collapse:separate; 
+  	border-spacing: 0 3px;
+}
+
+#myTable2 tr:nth-child(even) {
+	background-color: #fff;
+}
+
+#myTable2 tr:hover {
+	background-color: #aae;
+	/*border: solid 1px black;*/
+	/*margin-bottom: 30px;*/
+}
+
+#myTable2 th {
+	cursor: pointer;
+}
+
+#myTable2 td {
+	padding: 3px 10px;
+}
