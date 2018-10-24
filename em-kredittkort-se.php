@@ -2,7 +2,7 @@
 /*
 Plugin Name: EM Kredittkort Sverige
 Description: kredittkort liste for sverige
-Version: 1.0.2
+Version: 1.0.3
 GitHub Plugin URI: zeah/EM-kredittkort-se
 */
 

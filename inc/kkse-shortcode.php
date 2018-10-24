@@ -51,6 +51,11 @@ final class Kkse_shortcode {
 
 		if (!is_array($atts)) $atts = [];
 
+		$type = false;
+		if (isset($atts['kredittkort'])) $type = $atts['kredittkort'];
+		if (isset($atts['kreditkort'])) $type = $atts['kreditkort'];
+
+
 		$args = [
 			'post_type' 		=> 'emkredittkortse',
 			'posts_per_page' 	=> -1,
@@ -58,12 +63,12 @@ final class Kkse_shortcode {
 										'meta_value_num' => 'ASC',
 										'title' => 'ASC'
 								   ],
-			'meta_key'			=> 'emkredittkortse_sort'.($atts['kredittkort'] ? '_'.sanitize_text_field($atts['kredittkort']) : '')
+			'meta_key'			=> 'emkredittkortse_sort'.($type ? '_'.sanitize_text_field($type) : '')
 		];
 
 
-		$type = false;
-		if (isset($atts['kredittkort'])) $type = $atts['kredittkort'];
+		// $type = false;
+		// if (isset($atts['kredittkort'])) $type = $atts['kredittkort'];
 		if ($type)
 			$args['tax_query'] = array(
 					array(
@@ -266,7 +271,11 @@ final class Kkse_shortcode {
 			$meta = $this->esc_kses($meta);
 
 			// title
-			$html .= '<div class="emkredittkort-title-container"><a class="emkredittkort-title" href="'.$meta['readmore'].'">'.wp_kses_post($p->post_title).'</a></div>';
+			// $html .= '<div class="emkredittkort-title-container"><a class="emkredittkort-title" href="'.$meta['readmore'].'">'.wp_kses_post($p->post_title).'</a></div>';
+			$html .= sprintf('<div class="emkredittkort-title-container"><a class="emkredittkort-title" href="%s">%s</a></div>',
+				esc_url($meta['readmore']),
+				$meta['ctitle'] ? $meta['ctitle'] : esc_html($p->post_title)
+			);
 
 			// thumbnail
 			$html .= '<div class="emkredittkort-logo-container"><a target="_blank" rel="noopener" href="'.$meta['bestill'].'"><img class="emkredittkort-logo" src="'.wp_kses_post(get_the_post_thumbnail_url($p,'post-thumbnail')).'"></a></div>';
